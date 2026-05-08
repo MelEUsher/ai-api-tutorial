@@ -188,16 +188,25 @@ git clone --branch starter https://github.com/MelEUsher/ai-api-tutorial.git my-p
 cd my-project
 ```
 
-**Option B — Build from scratch:**
+**Option B — Build from scratch:** 
 my-project/
+
 ├── api/
-│   └── recommend.js
+
+│   └── recommend.js (this can be renamed to whatever is appropriate for your specific build)
+
 ├── .env
+
 ├── .gitignore
+
 ├── index.html
+
 ├── package.json
+
 ├── script.js
+
 └── style.css
+
 
 Create your `.env` file:
 `GEMINI_API_KEY=paste_your_key_here`
