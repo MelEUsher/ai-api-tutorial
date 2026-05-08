@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Which Elev8Tek Path Is Right For Me?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Which Elev8Tek Path Is Right For Me?</h1>
+    <p class="subtitle">Answer a few quick questions and we'll point you to the right program.</p>
+
+    <form id="quiz-form">
+      <div class="question">
+        <label for="experience">What's your current coding experience?</label>
+        <select id="experience" name="experience" required>
+          <option value="">-- Select one --</option>
+          <option value="none">None — I've never written code</option>
+          <option value="beginner">Beginner — I've dabbled or taken a class</option>
+          <option value="intermediate">Intermediate — I can build small projects</option>
+          <option value="advanced">Advanced — I'm a working developer</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="goal">What's your main goal?</label>
+        <select id="goal" name="goal" required>
+          <option value="">-- Select one --</option>
+          <option value="learn">Learn to code from scratch</option>
+          <option value="build">Build my own SaaS or app idea</option>
+          <option value="hired">Get hired as a developer</option>
+          <option value="scale">Scale an existing business with tech</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="time">How much time can you commit per week?</label>
+        <select id="time" name="time" required>
+          <option value="">-- Select one --</option>
+          <option value="low">1–5 hours</option>
+          <option value="medium">5–15 hours</option>
+          <option value="high">15+ hours</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="budget">What's your investment comfort level?</label>
+        <select id="budget" name="budget" required>
+          <option value="">-- Select one --</option>
+          <option value="low">Low — I want the most affordable path</option>
+          <option value="medium">Medium — I'll invest if it's worth it</option>
+          <option value="high">High — I want premium, high-touch support</option>
+        </select>
+      </div>
+
+      <button type="submit" id="submit-btn">Get My Recommendation</button>
+    </form>
+
+    <div id="result" class="hidden">
+      <h2>Your Recommended Path</h2>
+      <div id="result-content"></div>
+      <button id="reset-btn">Start Over</button>
+    </div>
+
+    <div id="loading" class="hidden">
+      <p>Thinking... 🤔</p>
+    </div>
+
+    <div id="error" class="hidden">
+      <p>Something went wrong. Please try again.</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "program-picker",
+  "version": "1.0.0",
+  "description": "An AI-powered Elev8Tek program recommender",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev"
+  }
+}
