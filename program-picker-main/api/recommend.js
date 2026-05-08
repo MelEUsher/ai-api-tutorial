@@ -60,7 +60,8 @@ Respond with the program name on its own line, followed by 2-3 sentences explain
     );
 
     if (!geminiResponse.ok) {
-      throw new Error("Gemini API request failed");
+        const errText = await geminiResponse.text();
+        throw new Error("Gemini error: " + errText);    
     }
 
     const geminiData = await geminiResponse.json();
