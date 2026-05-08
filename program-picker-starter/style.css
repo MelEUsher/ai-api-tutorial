@@ -1,0 +1,35 @@
+/* Starter CSS — make it your own!
+   The tutorial includes a sample stylesheet you can reference,
+   but try to design something that fits YOUR project's theme. */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  /* TODO: Pick a background — solid color, gradient, or image */
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+/* TODO: Style your .container — give it max-width, padding, background, border-radius, etc. */
+
+
+/* TODO: Style your headings (h1, h2) */
+
+
+/* TODO: Style your form labels and selects/inputs */
+
+
+/* TODO: Style your buttons (including hover and disabled states) */
+
+
+/* Utility class — keep this. It's used to show/hide elements via JavaScript. */
+.hidden {
+  display: none;
+}
+
+/* TODO: Style your #result, #loading, and #error sections */

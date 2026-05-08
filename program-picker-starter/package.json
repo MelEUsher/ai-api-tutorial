@@ -1,0 +1,9 @@
+{
+  "name": "program-picker-starter",
+  "version": "1.0.0",
+  "description": "Starter template for an AI-powered recommender — Elev8Tek weekend sprint",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev"
+  }
+}
