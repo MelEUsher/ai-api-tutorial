@@ -1,3 +1,18 @@
+/* =======================================
+   ELEV8TEK BRAND STYLING — Program Picker
+   ======================================= */
+
+:root {
+  --teal: #29BEC4;
+  --teal-dark: #1A8A8F;
+  --teal-glow: rgba(41,190,196,0.12);
+  --dark: #0F1A1C;
+  --dark-card-border: rgba(41,190,196,0.15);
+  --cream: #F5F3EF;
+  --white: #FFFFFF;
+  --text-on-dark: #D0D0D0;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,29 +21,35 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* Hero gradient from Elev8Tek brand */
+  background: linear-gradient(170deg, #0C1618 0%, #133338 40%, #1A5558 70%, #1A8A8F 100%);
   min-height: 100vh;
   padding: 2rem 1rem;
-  color: #1a1a1a;
+  color: var(--white);
 }
 
 .container {
   max-width: 600px;
   margin: 0 auto;
-  background: white;
+  /* Dark card gradient with teal glow */
+  background:
+    radial-gradient(80% 60% at 70% 50%, rgba(13, 140, 140, 0.18) 0%, rgba(13, 140, 140, 0) 65%),
+    linear-gradient(160deg, rgba(19,51,56,0.9), rgba(15,26,28,0.95));
   padding: 2.5rem;
   border-radius: 12px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--dark-card-border);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
 h1 {
   font-size: 1.75rem;
   margin-bottom: 0.5rem;
-  color: #2d3748;
+  color: var(--white);
+  font-weight: 800;
 }
 
 .subtitle {
-  color: #718096;
+  color: var(--text-on-dark);
   margin-bottom: 2rem;
 }
 
@@ -40,22 +61,33 @@ label {
   display: block;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: #2d3748;
+  color: var(--white);
 }
 
 select {
   width: 100%;
   padding: 0.75rem;
   font-size: 1rem;
-  border: 2px solid #e2e8f0;
+  border: 2px solid var(--dark-card-border);
   border-radius: 8px;
-  background: white;
+  background: rgba(15, 26, 28, 0.6);
+  color: var(--white);
   cursor: pointer;
+  transition: border-color 0.3s;
 }
 
 select:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: var(--teal);
+}
+
+select:hover {
+  border-color: var(--teal);
+}
+
+select option {
+  background: var(--dark);
+  color: var(--white);
 }
 
 button {
@@ -63,21 +95,24 @@ button {
   padding: 0.875rem;
   font-size: 1rem;
   font-weight: 600;
-  background: #667eea;
-  color: white;
+  background: var(--teal);
+  color: var(--white);
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.3s;
 }
 
 button:hover {
-  background: #5568d3;
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px 3px rgba(13, 140, 140, 0.6);
 }
 
 button:disabled {
-  background: #a0aec0;
+  background: rgba(41, 190, 196, 0.3);
   cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
 
 .hidden {
@@ -87,20 +122,21 @@ button:disabled {
 #result {
   margin-top: 2rem;
   padding: 1.5rem;
-  background: #f7fafc;
+  background: rgba(15, 26, 28, 0.6);
   border-radius: 8px;
-  border-left: 4px solid #667eea;
+  border-left: 4px solid var(--teal);
 }
 
 #result h2 {
   margin-bottom: 1rem;
-  color: #2d3748;
+  color: var(--white);
 }
 
 #result-content {
   margin-bottom: 1.5rem;
   line-height: 1.6;
   white-space: pre-wrap;
+  color: var(--text-on-dark);
 }
 
 #loading,
@@ -108,8 +144,9 @@ button:disabled {
   margin-top: 2rem;
   text-align: center;
   padding: 1rem;
+  color: var(--text-on-dark);
 }
 
 #error {
-  color: #c53030;
+  color: #ff8585;
 }
